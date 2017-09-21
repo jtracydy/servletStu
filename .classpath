@@ -8,6 +8,7 @@
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
-	<classpathentry kind="lib" path="E:/jar包/JAVA JAR and resource/servlet-api.jar"/>
+	<classpathentry kind="lib" path="E:/jar包/JAVA JAR and resource/servlet-api.jar" sourcepath="E:/jar_source/apache-tomcat-7.0.65-src.zip"/>
+	<classpathentry kind="lib" path="E:/jar包/JAVA JAR and resource/apache-log4j-1.2.15/log4j-1.2.15.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

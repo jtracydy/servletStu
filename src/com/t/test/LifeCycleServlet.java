@@ -26,8 +26,7 @@ public class LifeCycleServlet extends HttpServlet {
 
 	}
 
-	public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+	public void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		System.out.println("调用 doGet()方法 ");
 	}
 
@@ -59,7 +58,6 @@ public class LifeCycleServlet extends HttpServlet {
 	public void service(ServletRequest req, ServletResponse res) throws ServletException, IOException {
 		System.out.println("调用 service()方法 ");
 		super.service(req, res);
-
 	}
 
 	@PreDestroy
