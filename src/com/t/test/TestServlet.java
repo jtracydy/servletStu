@@ -9,9 +9,9 @@ import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 
 public class TestServlet implements Servlet {
-	@Override
-	public void destroy() {
-		// TODO Auto-generated method stub
+
+	public TestServlet() {
+		System.out.println("TestServlet");
 	}
 
 	@Override
@@ -27,8 +27,14 @@ public class TestServlet implements Servlet {
 	}
 
 	@Override
-	public void init(ServletConfig arg0) throws ServletException {
+	public void init(ServletConfig config) throws ServletException {
 		System.out.println("servlet初始化");
+		String useName1 = config.getInitParameter("TestServlet");
+		// String userName2 =
+		// getServletConfig().getInitParameter("LifeCycleServlet");
+		System.out.println("TestServlet+" + useName1);
+		// System.out.println("LifeCycleServlet+" + userName2);
+
 	}
 
 	@Override
@@ -36,7 +42,9 @@ public class TestServlet implements Servlet {
 		System.out.println("service");
 	}
 
-	public TestServlet() {
-		System.out.println("TestServlet");
+	@Override
+	public void destroy() {
+		// TODO Auto-generated method stub
 	}
+
 }
