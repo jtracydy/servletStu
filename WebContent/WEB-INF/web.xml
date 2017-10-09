@@ -18,7 +18,7 @@
 		<param-name>B</param-name>
 		<param-value>2</param-value>
 	</context-param>
-	
+
 	<servlet>
 		<servlet-name>TestServlet</servlet-name>
 		<servlet-class>com.t.test.TestServlet</servlet-class>
@@ -26,6 +26,14 @@
 	<servlet>
 		<servlet-name>LifeCycleServlet</servlet-name>
 		<servlet-class>com.t.test.LifeCycleServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>TestServletConfig</servlet-name>
+		<servlet-class>com.t.test.TestServletConfig</servlet-class>
+		<init-param>
+			<param-name>userName</param-name>
+			<param-value>SAM-SHO</param-value>
+		</init-param>
 	</servlet>
 
 
@@ -36,5 +44,9 @@
 	<servlet-mapping>
 		<servlet-name>LifeCycleServlet</servlet-name>
 		<url-pattern>/LifeCycleServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>TestServletConfig</servlet-name>
+		<url-pattern>/TestServletConfig</url-pattern>
 	</servlet-mapping>
 </web-app>
