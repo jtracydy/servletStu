@@ -18,6 +18,24 @@
 		<param-name>B</param-name>
 		<param-value>2</param-value>
 	</context-param>
+	<!-- 过滤器配置 -->
+	<filter>
+		<filter-name>MyFilter</filter-name>
+		<filter-class>com.t.config.MyFilter</filter-class>
+		<init-param>
+			<param-name>name</param-name>
+			<param-value>Sam-Sho</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>MyFilter</filter-name>
+		<!-- 配置url的规则 ，可以配置多个 -->
+		<url-pattern>/*</url-pattern>
+		<url-pattern>*.do</url-pattern>
+		<!-- 配置到达servlet的方式 -->
+		<dispatcher>REQUEST</dispatcher>
+		<dispatcher>FORWARD</dispatcher>
+	</filter-mapping>
 
 	<servlet>
 		<servlet-name>TestServlet</servlet-name>
@@ -43,6 +61,14 @@
 		<servlet-name>CookieReader</servlet-name>
 		<servlet-class>com.t.cookie.CookieReader</servlet-class>
 	</servlet>
+	<servlet>
+		<servlet-name>SessionWriter</servlet-name>
+		<servlet-class>com.t.session.SessionWriter</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>SessionReader</servlet-name>
+		<servlet-class>com.t.session.SessionReader</servlet-class>
+	</servlet>
 
 
 	<servlet-mapping>
@@ -64,5 +90,13 @@
 	<servlet-mapping>
 		<servlet-name>CookieReader</servlet-name>
 		<url-pattern>/CookieReader</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>SessionWriter</servlet-name>
+		<url-pattern>/SessionWriter</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>SessionReader</servlet-name>
+		<url-pattern>/SessionReader</url-pattern>
 	</servlet-mapping>
 </web-app>
