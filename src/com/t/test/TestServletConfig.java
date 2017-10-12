@@ -3,6 +3,7 @@ package com.t.test;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.URL;
+import java.util.Enumeration;
 import java.util.Properties;
 
 import javax.servlet.ServletConfig;
@@ -26,6 +27,7 @@ public class TestServletConfig extends HttpServlet {
 		System.out.println("调用 init()方法 ");
 	}
 
+	@SuppressWarnings("unused")
 	@Override
 	public void init(ServletConfig config) throws ServletException {
 		// super.init(config);
@@ -56,6 +58,20 @@ public class TestServletConfig extends HttpServlet {
 			getProperties(context.getResourceAsStream("/WEB-INF/config/jdbc.properties"));
 		} catch (IOException e) {
 			e.printStackTrace();
+		}
+		/**
+		 * 利用ServletContext，实现 Servlet 对象之间通讯。 主要是4个有关 Attribute
+		 * 的方法：setAttribute()、getAttribute()、removeAttribute()、getAttributeNames
+		 * 
+		 */
+		System.out.println("获取getAttributeNames");
+		context.setAttribute("servletParam1", "Param1");
+		context.setAttribute("servletParam2", "Param2");
+
+		Enumeration<String> e = context.getAttributeNames();
+		while (e.hasMoreElements()) {
+			String value = (String) e.nextElement();// 调用nextElement方法获得元素
+			System.out.print("param::::"+value);
 		}
 
 	}

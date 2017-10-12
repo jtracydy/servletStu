@@ -35,6 +35,14 @@
 			<param-value>SAM-SHO</param-value>
 		</init-param>
 	</servlet>
+	<servlet>
+		<servlet-name>CookieWriter</servlet-name>
+		<servlet-class>com.t.cookie.CookieWriter</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>CookieReader</servlet-name>
+		<servlet-class>com.t.cookie.CookieReader</servlet-class>
+	</servlet>
 
 
 	<servlet-mapping>
@@ -48,5 +56,13 @@
 	<servlet-mapping>
 		<servlet-name>TestServletConfig</servlet-name>
 		<url-pattern>/TestServletConfig</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>CookieWriter</servlet-name>
+		<url-pattern>/CookieWriter</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>CookieReader</servlet-name>
+		<url-pattern>/CookieReader</url-pattern>
 	</servlet-mapping>
 </web-app>
