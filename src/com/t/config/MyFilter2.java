@@ -19,7 +19,7 @@ import javax.servlet.http.HttpServletRequest;
  * @author SAM-SHO
  * @Date 2014-9-25
  */
-public class MyFilter implements Filter {
+public class MyFilter2 implements Filter {
 
 	public void destroy() {
 
@@ -36,9 +36,9 @@ public class MyFilter implements Filter {
 //		System.out.println("上下文路径:" + contextPath);
 //		System.out.println("访问的servlet或者jsp的路径 ： " + servletPath);
 
-		System.out.println("MyFilter pre.............");
+		System.out.println("MyFilter2 pre...........");
 		chain.doFilter(req, resp);
-		System.out.println("MyFilter after.............");
+		System.out.println("MyFilter2 after.............");
 	}
 
 	public void init(FilterConfig filterConfig) throws ServletException {
