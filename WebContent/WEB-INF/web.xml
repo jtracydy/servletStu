@@ -128,6 +128,10 @@
 		<servlet-name>SessionLogin</servlet-name>
 		<servlet-class>com.t.session.SessionLogin</servlet-class>
 	</servlet>
+	<servlet>
+		<servlet-name>ServletStuTest</servlet-name>
+		<servlet-class>com.t.test.ServletStuTest</servlet-class>
+	</servlet>
 
 
 	<servlet-mapping>
@@ -161,6 +165,11 @@
 	<servlet-mapping>
 		<servlet-name>SessionLogin</servlet-name>
 		<url-pattern>/SessionLogin</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>ServletStuTest</servlet-name>
+		<url-pattern>/*</url-pattern>
 	</servlet-mapping>
 	<!-- servlet配置 -->
 </web-app>
