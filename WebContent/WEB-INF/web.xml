@@ -39,7 +39,7 @@
 		<dispatcher>FORWARD</dispatcher>
 	</filter-mapping>
 	<!-- 过滤器配置 -->
-	
+
 	<!-- 过滤器配置 -->
 	<filter>
 		<filter-name>MyFilter2</filter-name>
@@ -60,7 +60,7 @@
 	</filter-mapping>
 	<!-- 过滤器配置 -->
 
-    <!-- 过滤器配置 -->
+	<!-- 过滤器配置 -->
 	<filter>
 		<filter-name>MyFilter1</filter-name>
 		<filter-class>com.t.config.MyFilter1</filter-class>
@@ -79,7 +79,18 @@
 		<dispatcher>FORWARD</dispatcher>
 	</filter-mapping>
 	<!-- 过滤器配置 -->
+
+	<!-- 监听器配置 -->
+	<listener>
+		<listener-class>com.t.config.listener.Mylistener</listener-class>
+	</listener>
 	
+	<listener>
+		<listener-class>com.t.config.listener.ListenerTest</listener-class>
+	</listener>
+	<!-- 监听器配置 -->
+
+
 	<!-- servlet配置 -->
 	<servlet>
 		<servlet-name>TestServlet</servlet-name>

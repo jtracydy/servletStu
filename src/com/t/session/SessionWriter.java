@@ -17,7 +17,7 @@ public class SessionWriter extends HttpServlet {
 		HttpSession session = req.getSession();
 		Cookie cookie = new Cookie("JSESSIONID", session.getId());
 		cookie.setMaxAge(session.getMaxInactiveInterval());
-		cookie.setPath(this.getServletContext().getContextPath());
+		cookie.setPath(((HttpServletRequest) this.getServletContext()).getContextPath());
 		res.addCookie(cookie);
 	}
 
